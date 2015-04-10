@@ -28,7 +28,7 @@ class Entry(Base):
     __tablename__ = 'entries'
     id = Column(Integer, primary_key=True)
     title = Column(Text(255), unique=True)
-    body = Column(Unicode)
+    body = Column(UnicodeText)
     created = Column(DateTime, default=datetime.now)
     edited = Column(DateTime, default=datetime.now)
 
