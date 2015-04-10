@@ -29,7 +29,7 @@ class Entry(Base):
     id = Column(Integer, primary_key=True)
     title = Column(Text(255), unique=True)
     body = Column(Unicode)
-	created = Column(DateTime, default=datetime.now)
-	edited = Column(DateTime, default=datetime.now)
+    created = Column(DateTime, default=datetime.now)
+    edited = Column(DateTime, default=datetime.now)
 
 Index('my_index', MyModel.name, unique=True, mysql_length=255)
